@@ -6,29 +6,21 @@
     <title>Startappss</title>
     <style>
         th{
-            background-color: aquamarine;
+            background-color: rgb(255, 150, 127);
             font-size: large;
         }
         h1{
             text-decoration: underline;
+            text-align: center;
         }
         body{
             margin: 30px;
         }
         img{
-            height: 200px;
             width: 400px;
+            height: 200px;
         }
-        table, img, form, div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        form{
-            /* border: 2px solid rgb(253, 5, 5); */
-            margin-left: 600px;
-        }
+
         nav{
             display: flex;
             flex-direction: row;
@@ -37,18 +29,76 @@
             justify-content: space-evenly;
             align-items: center;
         }
+        div h1{
+            /* background-color: pink; */
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            color: red;
+        }
+        form{
+            margin-left: 50px;
+        }
+        .flexbox{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+        .anchor{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            h1{
+                left: 0;
+                text-align: center;
+            }
+            .anchor{
+                left: 0;
+                text-align: center;
+            }
+            .flexbox{
+                flex-direction: column;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+            form{
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            table{
+                margin-left: 0;
+                width: 100%;
+            }
+            h2{
+                margin-left: 0;
+                text-align: center;
+            }
+            nav{
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <nav><a href="#Startappss" style="text-decoration: none; color: white;">Home</a>
     <a href="#contact" style="text-decoration: none; color: white;">contact us</a>
     </nav>
-    <h1 id="Startappss">Startappss</h1>
+    <div>
+        <h1>Startappss</h1>
+    </div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet est cum voluptatum, iusto beatae nesciunt reiciendis exercitationem similique! Sed aliquid quis dolorum quam libero nostrum porro earum sapiente. Odio in unde incidunt! Nostrum velit recusandae, laudantium sint eaque nisi nam deserunt. Sit distinctio id ducimus reprehenderit nihil aliquam nisi, numquam consequuntur quidem repudiandae consectetur eum ea nesciunt laborum praesentium natus non et iusto magnam cumque. Esse veritatis ipsa aliquid odio laboriosam! Debitis veritatis perspiciatis minima numquam, voluptatibus earum vero ipsa distinctio quibusdam repudiandae consectetur omnis tempora. Facilis quas beatae libero sunt ratione quidem neque ad nam culpa error aperiam, eos vero soluta, repudiandae dolorem? Neque eaque beatae dolor quod! Temporibus pariatur porro incidunt aliquid eaque eum? Voluptate dolore provident ducimus maxime assumenda veritatis eos ea rerum quas alias tempore odio quasi nam magnam ipsam esse earum culpa quidem fugit, minus amet vero non iure? Ex ut eos a consectetur quidem odit adipisci quisquam dolorem! Veniam tenetur corporis debitis ea id et velit, error facere. Sapiente reprehenderit, illo laudantium sunt iste omnis eaque culpa. Cum perspiciatis maiores facere consequatur, repudiandae doloremque quaerat ipsum autem? Placeat similique optio, exercitationem beatae deserunt aliquid. Expedita totam earum obcaecati, voluptate voluptatum magnam cumque! Consequatur, atque id? Accusamus distinctio maxime assumenda debitis, impedit quis? Perferendis ut doloremque nulla quod voluptates, minima at? Quam dolor, aliquid repellendus quae commodi quis totam dignissimos eveniet voluptatem neque iusto modi vitae obcaecati placeat, sed incidunt, ipsum ducimus ad debitis quia ex optio. Ipsam magni pariatur exercitationem explicabo distinctio dolor sequi, vitae maiores fuga natus tempore eos sed debitis ab ratione doloribus labore eveniet quaerat officiis. Ducimus, ratione at. Libero eum dolores eos sequi veniam dolore ipsa consectetur, deleniti tempora deserunt! Incidunt, laborum veritatis minus doloremque sit sunt expedita dolor beatae, adipisci fuga dolorum cupiditate voluptatum possimus quaerat eveniet in ullam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo earum, facere voluptates necessitatibus quis, voluptatum consequuntur magni beatae tempore veritatis facilis esse. Error dicta recusandae provident expedita aperiam voluptate aliquid facilis sit incidunt fugiat repudiandae soluta fugit amet culpa inventore, sequi quo cumque rem alias? Optio molestias modi eaque et adipisci veniam dignissimos velit quos vitae repudiandae non, eius repellat quis fugit eum atque itaque facilis maxime molestiae incidunt, sint nulla natus libero! Animi voluptatem pariatur reiciendis blanditiis? Dignissimos error et, quod corrupti ipsum perferendis minus necessitatibus accusamus repellat ipsam tempore quis sequi distinctio repudiandae. Dolorem alias praesentium quia voluptatem.</p>
-    <img src="https://thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="" style="margin-left: 500px;">
-    <br>
-    <br>
-    <form action="" id="contact" style="background-color: #fcfafa; padding: 10px; width: 250px;">
+    <div class="anchor"><button style="height: 30px; width: 70px; background-color: red;"><a href="https://www.google.com" style="text-decoration: none; color: white; background-color:">click me</a></button></div>
+    <div class="flexbox">
+    <img src="https://thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="">
+    <form action="" id="contact" style="background-color: #fcfafa; border: 2px solid red; border-radius: 15px; padding: 15px;">
         <label for="nme" style="color: black;">name</label>
         <input type="text" id="nme" style="width: 100%; margin-top: 5px;">
         <br>
@@ -60,23 +110,99 @@
         <button style="margin-top: 10px; padding: 5px; background-color: red; color: white;">Submit</button>
         <br>
     </form>
-    <div><button style="height: 30px; width: 70px; background-color: red;"><a href="https://www.google.com" style="text-decoration: none; color: white; background-color:">click me</a></button></div>
-    <table border="1">
-            <tr>
-                <th>name</td>
-                <th>subject</th>
-                <th>marks</th>
-            </tr>
-            <tr>
-                <td>Disha</td>
-                <td>english</td>
-                <td>99</td>
-            </tr>
-            <tr>
-                <td>jatin</td>
-                <td>maths</td>
-                <td>00</td>
-            </tr>
-        </table>
+    </div>
+    <h2 style="color: red; text-decoration: underline; text-align: center;">Students Data</h2>
+    <table border="1" style="margin: auto;">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Specialization</th>
+        <th>City</th>
+        <th>Experience</th>
+        <th>Salary</th>
+    </tr>
+
+    <tr>
+        <td>Rohit</td>
+        <td>22</td>
+        <td>Web Development</td>
+        <td>Indore</td>
+        <td>1 year</td>
+        <td>25,000</td>
+    </tr>
+
+    <tr>
+        <td>Anjali</td>
+        <td>24</td>
+        <td>UI/UX</td>
+        <td>Bhopal</td>
+        <td>2 years</td>
+        <td>30,000</td>
+    </tr>
+
+    <tr>
+        <td>Aman</td>
+        <td>26</td>
+        <td>Backend</td>
+        <td>Pune</td>
+        <td>3 years</td>
+        <td>40,000</td>
+    </tr>
+
+    <tr>
+        <td>Neha</td>
+        <td>23</td>
+        <td>Testing</td>
+        <td>Delhi</td>
+        <td>1 year</td>
+        <td>22,000</td>
+    </tr>
+
+    <tr>
+        <td>Karan</td>
+        <td>28</td>
+        <td>Data Analysis</td>
+        <td>Mumbai</td>
+        <td>4 years</td>
+        <td>55,000</td>
+    </tr>
+
+    <tr>
+        <td>Pooja</td>
+        <td>25</td>
+        <td>Frontend</td>
+        <td>Jaipur</td>
+        <td>2 years</td>
+        <td>35,000</td>
+    </tr>
+
+    <tr>
+        <td>Rahul</td>
+        <td>27</td>
+        <td>DevOps</td>
+        <td>Noida</td>
+        <td>3 years</td>
+        <td>45,000</td>
+    </tr>
+
+    <tr>
+        <td>Sneha</td>
+        <td>21</td>
+        <td>Content</td>
+        <td>Udaipur</td>
+        <td>6 months</td>
+        <td>18,000</td>
+    </tr>
+
+    <tr>
+        <td>Arjun</td>
+        <td>29</td>
+        <td>Project Management</td>
+        <td>Ahmedabad</td>
+        <td>5 years</td>
+        <td>60,000</td>
+    </tr>
+</table>
+
 </body>
 </html>
