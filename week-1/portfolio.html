@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color:#1a2e39;
+            color: white;
+            height: 100%;
+        }
+        *{
+            margin: 0;
+        }
+        .navbar{
+            background-color: #0f1b21;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content:space-around;
+            /* padding-left: 300px; */
+            padding-top: 0px;
+            padding-bottom: 0px;
+            height: 4rem;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            font-size: large;
+        }
+        .navsection{
+            display: flex;
+            width: 30%;
+            flex-flow: row wrap;
+            /* padding-top: 1%; */
+            justify-content: space-between;
+        }
+        .head31{
+            display: inline-block;
+            color: aqua;
+        }
+        .head3{
+            display: inline;
+        }
+        .main{
+            display: flex;
+            /* height: 100%;
+             */
+             /* border: 2px solid red; */
+             padding-top: 5%;
+             width: 60rem;
+             height: 20rem;
+            /* border: 4px solid red; */
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10%;
+            /* justify-content: space-between; */
+            /* justify-content: center; */
+        }
+        .intro{
+            width: 25rem;
+            /* height: 30rem; */
+            /* border: 2px solid black; */
+        }
+        .photo{
+            width: 270px;
+            height: 270px;
+            /* border: 2px solid black; */
+        }
+
+        .photo img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8904c2;
+            box-shadow: 
+                0 0 15px #00ffff,
+                0 0 15px #7300ff,
+                0 0 30px #b300ff;
+        }
+        #bio{
+            padding: 5% 10% 5% 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title"><h1>Portfolio</h1></div>
+        <div class="navsection">
+            <a href="./portfolio.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="">Project</a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="intro">
+        <h2 class="head1">Hello, It's Me!!</h2>
+        <h1 class="head2">Disha Tiwari</h1>
+        <div class="chhota">
+            <h2 class="head3">And I'm a</h2>
+            <h2 class="head31">FullStack Developer!</h2>
+        </div>
+        <button style="margin-top: 4%; background-color: aqua; border-radius: 15px; border: 2px solid black; width: 25%; height: 30%;"><b>Know More</b></button>
+        </div>
+        <div class="photo">
+            <img src="./DSC_4323.JPG" alt="">
+        </div>
+    </div>
+    <div>
+        <h2 id="bio">Passionate learner with a curious mind, exploring technology and creativity. Focused on self-growth, consistency, and turning ideas into reality. Believes in quiet hard work, positive mindset, and becoming better every single day.</h2>
+    </div>
+    </body>
+</html>
