@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Assignment</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        .item{
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        .item img{
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        h2{
+            text-align: center;
+        }
+        @media (max-width: 480px){
+            .grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Products </h2>
+    <div class="grid">
+    <div class="item"><img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg">
+    <h4>Watch</h4>
+    </div>
+    <div class="item">
+        <img src="https://images.pexels.com/photos/1198264/pexels-photo-1198264.jpeg"><h4>Clock</h4>
+    </div>
+        <div class="item">
+        <img src="https://images.pexels.com/photos/3808229/pexels-photo-3808229.jpeg">
+            <h4>Purse</h4></div>
+        <div class="item"><img src="https://images.pexels.com/photos/18105/pexels-photo.jpg">
+            <h4>Laptop</h4></div>
+        <div class="item">
+            <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg"><h4>Mobile</h4>
+        </div>
+        <div class="item"><img src="https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg">
+            <h4>Glasses</h4></div>
+    <div class="item">
+        <img src="https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg">
+        <h4>Shoes</h4></div>
+        <div class="item">
+        <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg"><h4>Bag</h4>
+        </div>
+        <div class="item">
+        <img src="https://images.pexels.com/photos/844923/pexels-photo-844923.jpeg"><h4>Headphones</h4>
+     </div>
+    </div>
+</body>
+</html>
