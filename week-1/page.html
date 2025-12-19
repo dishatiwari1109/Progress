@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav
+        {
+            width: 100vw;
+            height: 60px;
+            background-color: #5d0f6d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .links a{
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+        .sidebar{
+            display: none;
+        }   
+        .main{
+            width: 70vw;
+            height: 80vh;
+            background-image: linear-gradient(45deg, #ffecd2 30%, #e404fd 100%);
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 3%;
+        }
+        @media (max-width: 450px) {
+            .links{
+                display: none;
+            }
+            .sidebar{
+                display: block;
+            }
+            .main{
+                margin: 0;
+                width: 100vw;
+                border-radius: 0px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="title">My Website</div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="sidebar">
+            <img src="./menu.png" alt="sidebar" width="30px" height="30px">
+        </div>
+    </nav>
+    <div class="main">
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <h2>Just a Test!</h2>
+            <p>This is a sample webpage to demonstrate a responsive layout using HTML and CSS. Resize the browser window to see how the layout changes for smaller screens.</p>
+        </div>
+        <div class="image">
+            <img src="" alt="">
+        </div>
+    </div>
+    <a href="https://www.flaticon.com/free-icons/nav" title="nav icons" style="font-size: smaller; display: none;">Nav icons created by TravisAvery - Flaticon</a>
+</body>
+</html>
