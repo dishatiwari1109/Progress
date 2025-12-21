@@ -1,509 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav
-        {
-            width: 100vw;
-            height: 60px;
-            background-color: #5d0f6d;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        .links a{
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-size: 18px;
-        }
-        .sidebar{
-            display: none;
-        }   
-        .container{
-            width: 50%;
-            height: auto;
-            margin-top: 15%;
-        }
-        .main{
-            width: 70vw;
-            height: 80vh;
-            background-image: linear-gradient(45deg, #ffecd2 30%, #e404fd 100%);
-            border: 2px solid black;
-            border-radius: 15px;
-            margin: auto;
-            margin-top: 3%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
-        }
-        .main2{
-            width: 100%;
-            min-height: 90vh;
-            background-color: #dba8e1;
-            margin-top: 3%;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        .content{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            margin: auto;
-        }
+      nav {
+        width: 100vw;
+        height: 60px;
+        background-color: #5d0f6d;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+      .links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 18px;
+      }
+      .sidebar {
+        display: none;
+      }
+      .container {
+        width: 50%;
+        height: auto;
+        margin-top: 15%;
+      }
+      .main {
+        width: 70vw;
+        height: 80vh;
+        background-image: linear-gradient(45deg, #ffecd2 30%, #e404fd 100%);
+        border: 2px solid black;
+        border-radius: 15px;
+        margin: auto;
+        margin-top: 3%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+      .main2 {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #dba8e1;
+        margin-top: 3%;
+      }
 
-        .bgimage{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .image{
-            width: 40%;
-            height: 100%;
-        }
-        button{
-            padding: 10px 20px;
-            font-size: medium;
-            background-color: #5d0f6d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+      }
 
-        }
-        .centre{
-            margin: auto;
-            margin-top: 5%;
-            width: 100vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+      .bgimage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .image {
+        width: 40%;
+        height: 100%;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: medium;
+        background-color: #5d0f6d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .centre {
+        margin: auto;
+        margin-top: 5%;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .lorem {
+        width: 30%;
+        padding-left: 2%;
+      }
+      #imge {
+        width: 100px;
+        height: 100px;
+      }
+      .dabb1 {
+        width: 22%;
+        text-align: center;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .box {
+        width: 70vw;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+      }
+      .left {
+        margin-top: 2%;
+        width: 40%;
+        margin-left: 15%;
+      }
+      .sathi {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        flex-direction: column;
+      }
+      .square {
+        border: #af56b9 2px solid;
+        box-shadow: #af56b9 2px 20px 10px;
+        border-radius: 10px;
+        padding: 15px;
+        width: 80%;
+        background-color: #ecd1ef;
+      }
+      .dabba {
+        margin-top: 5%;
+        width: 80%;
+        height: 20%;
+        background-color: #820e88;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right {
+        width: 45%;
+        object-fit: cover;
+      }
+      .photu {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .second {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      .container2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-        }
-        .lorem{
-            width: 30%;
-            padding-left: 2%;
-        }
-        #imge{
-            width: 100px;
-            height: 100px;
-        }
-        .dabb1{
-            width: 22%;
-            text-align: center;
-            margin-top: 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .box{
-            width: 70vw;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 5%;
-        }
-        .left{
-            margin-top: 2%;
-            width: 40%; 
-            margin-left: 15%;
-        }
-        .sathi{
-            display: flex;
-            width: 100%;
-            gap: 10px;
-            flex-direction: column;
-        }
-        .square{
-            border: #af56b9 2px solid;
-            box-shadow: #af56b9 2px 20px 10px;
-            border-radius: 10px;
-            padding: 15px;
-            width: 80%;
-            background-color: #ecd1ef;
-        }
-        .dabba{
-            margin-top: 5%;
-            width: 80%;
-            height: 20%;
-            background-color: #820e88;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .right{
-            width: 45%; 
-            object-fit: cover;
-        }
-        .photu{
-            width: 80%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .second{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-        .container2{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+      .image2 {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+      }
+      .image2 img {
+        width: 80%;
+        height: auto;
+      }
+      .form {
+        background-color: transparent;
+        margin-top: 30px;
+        padding-left: 15%;
+        width: 90%;
+        border-radius: 10px;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
-        .image2{
-            width: 40%;
-            display: flex;
-            justify-content: center;
-        }
-        .image2 img{
-            width: 80%;
-            height: auto;
-        }
-        .form {
-            background-color: transparent;
-            margin-top: 30px;
-            padding-left: 15%;
-            width: 90%;
-            border-radius: 10px;
-            height: 90%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-         }
+      .form input {
+        padding: 12px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+      }
 
-        .form input {
-            padding: 12px;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-            font-size: 14px;
-        }
+      .form button {
+        background-color: #ffc400;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
 
-        .form button {
-            background-color: #ffc400;   
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+      .form button:hover {
+        background-color: #ffb300;
+      }
+      .results {
+        width: 90%;
+        margin: auto;
+        padding: 40px 0;
+        text-align: center;
+      }
 
-        .form button:hover {
-            background-color: #ffb300;
-        }
-        .results{
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-            text-align: center;
-        }
+      .heading {
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
 
-        .heading{
-            font-size: 28px;
-            margin-bottom: 40px;
-        }
+      .score {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
 
-        .score{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+      .boxx {
+        width: 40%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
 
-        .boxx{
-            width: 40%;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
+      .boxx h4 {
+        margin-bottom: 15px;
+      }
 
-        .boxx h4{
-            margin-bottom: 15px;
-        }
+      .boxx p {
+        margin: 10px 0 5px;
+        font-size: 14px;
+      }
 
-        .boxx p{
-            margin: 10px 0 5px;
-            font-size: 14px;
-        }
+      .bar {
+        height: 25px;
+        line-height: 25px;
+        color: white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
 
-        .bar{
-            height: 25px;
-            line-height: 25px;
-            color: white;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
+      .purple {
+        width: 70%;
+        background-color: #d84cff;
+        box-shadow: #d84cff 2px 10px 10px;
+      }
 
-        .purple{
-            width: 70%;
-            background-color: #d84cff;
-        }
+      .yellow {
+        width: 55%;
+        background-color: #ffc400;
+        box-shadow: #ffc400 2px 10px 10px;
+        color: black;
+      }
 
-        .yellow{
-            width: 55%;
-            background-color: #ffc400;
-            color: black;
-        }
+      .subheading {
+        margin: 50px 0 20px;
+        font-size: 22px;
+      }
 
-        .subheading{
-            margin: 50px 0 20px;
-            font-size: 22px;
+      .logo {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10%;
+      }
+      .logo img {
+        width: 80px;
+        height: auto;
+      }
+      .pricing {
+        padding: 40px;
+        text-align: center;
+      }
+      .price-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .card {
+        background: white;
+        height: 100%;
+        width: 90%;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+      }
+      .card .tag {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: orange;
+        color: white;
+        padding: 5px 8px;
+        border-radius: 50%;
+        font-size: 12px;
+      }
+      .card h3 {
+        margin-bottom: 10px;
+      }
+      .card .price {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .card button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: #6a00ff;
+        color: white;
+        cursor: pointer;
+      }
+      .yellow {
+        border: 2px solid #ffc107;
+      }
+      .purple {
+        border: 2px solid #6a00ff;
+      }
+      .teachers {
+        padding: 40px;
+        background: white;
+        text-align: center;
+      }
+      .teacher-box {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .teacher-card {
+        width: 200px;
+      }
+      .teacher-card img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      .teacher-card h4 {
+        margin: 10px 0 5px;
+      }
+      .reviews {
+        padding: 40px;
+        text-align: center;
+      }
+      .review-box {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .review-card {
+        width: 220px;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+      }
+      .contact {
+        padding: 40px;
+        background: #6a00ff;
+        color: white;
+        text-align: center;
+      }
+      .contact form {
+        max-width: 400px;
+        margin: auto;
+      }
+      .contact input,
+      .contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: none;
+      }
+      .contact button {
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        background: orange;
+        color: white;
+        font-size: 16px;
+      }
+      footer {
+        background: #4b00b5;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      @media (max-width: 500px) {
+        .price-box {
+          grid-template-columns: repeat(2, 1fr);
         }
-
-        .logo{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10%;
+        .review-box {
+          flex-direction: column;
+          align-items: center;
         }
-
-        .logo img{
-            width: 80px;
-            height: auto;
+        .price-box {
+          grid-template-columns: 1fr;
         }
-
-        @media (max-width: 500px) {
-            .centre{
-                flex-direction: column;
-            }
-            .links{
-                display: none;
-            }
-            .sidebar{
-                display: block;
-            }
-            .container{
-                width: 100%;
-                height: auto;
-                margin: 1%;
-            }
-            button{
-                margin: 5%;
-            }
-            .main{
-                margin: 0;
-                width: 100vw;
-                border-radius: 0px;
-                height: 80vh;
-                background-image: linear-gradient(45deg, #ffecd2 30%, #e404fd 100%);
-                border: 2px solid black;
-                /* border-radius: 15px; */
-                /* margin: auto; */
-                /* margin-top: 3%; */
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: space-around;
-            }
-            .image{
-                width: 100%;
-                height: 45vh;
-            }
-            .lorem{
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-                padding-left: 10%;
-                padding-right: 10%;
-            }
-            #imge{
-                display: none;
-                height: 80%;
-                width: 80%;
-            }
-            .dabb1{
-                width: 60%;
-                margin: auto;
-                margin-top: 5%;
-                background-color: #dba8e1;
-                border-radius: 15px;
-            }
-            .content{
-                flex-direction: column;
-            }
-            .container2,
-            .image2{
-                width: 100%;
-                text-align: center;
-            }
-            .subscribe-form{
-                width: 100%;
-            }
+        .teacher-box {
+          flex-direction: column;
+          align-items: center;
         }
-        
+      }
+      @media (max-width: 500px) {
+        .centre {
+          flex-direction: column;
+        }
+        .links {
+          display: none;
+        }
+        .sidebar {
+          display: block;
+        }
+        .container {
+          width: 100%;
+          height: auto;
+          margin: 1%;
+        }
+        button {
+          margin: 5%;
+        }
+        .main {
+          margin: 0;
+          width: 100vw;
+          border-radius: 0px;
+          height: 80vh;
+          background-image: linear-gradient(45deg, #ffecd2 30%, #e404fd 100%);
+          border: 2px solid black;
+          /* border-radius: 15px; */
+          /* margin: auto; */
+          /* margin-top: 3%; */
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-around;
+        }
+        .image {
+          width: 100%;
+          height: 45vh;
+        }
+        .lorem {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+        #imge {
+          display: none;
+          height: 80%;
+          width: 80%;
+        }
+        .dabb1 {
+          width: 60%;
+          margin: auto;
+          margin-top: 5%;
+          background-color: #dba8e1;
+          border-radius: 15px;
+        }
+        .content {
+          flex-direction: column;
+        }
+        .container2,
+        .image2 {
+          width: 100%;
+          text-align: center;
+        }
+        .subscribe-form {
+          width: 100%;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="title">My Website</div>
-        <div class="links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="sidebar">
-            <img src="./menu.png" alt="sidebar" width="30px" height="30px">
-        </div>
+      <div class="title">My Website</div>
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="sidebar">
+        <img src="./menu.png" alt="sidebar" width="30px" height="30px" />
+      </div>
     </nav>
     <div class="main">
-        <div class="container">
-            <h1>Welcome to My Website</h1>
-            <h2>Just a Test!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quibusdam at veniam adipisci doloribus. Magni voluptates hic quibusdam laudantium doloremque consequatur ab aut ex sint nihil ipsam perferendis sequi veniam, dicta minima soluta ea ut expedita unde voluptatum obcaecati, vitae velit nemo! Porro hic consectetur libero officia quisquam vel eius?</p>
-            <button>Click Me</button>
-        </div>
-        <div class="image">
-            <img class="bgimage" src="./vecteezy_ai-generated-portrait-of-handsome-smiling-young-man-with_41642167.png" alt="">
-        </div>
+      <div class="container">
+        <h1>Welcome to My Website</h1>
+        <h2>Just a Test!</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+          quibusdam at veniam adipisci doloribus. Magni voluptates hic quibusdam
+          laudantium doloremque consequatur ab aut ex sint nihil ipsam
+          perferendis sequi veniam, dicta minima soluta ea ut expedita unde
+          voluptatum obcaecati, vitae velit nemo! Porro hic consectetur libero
+          officia quisquam vel eius?
+        </p>
+        <button>Click Me</button>
+      </div>
+      <div class="image">
+        <img
+          class="bgimage"
+          src="./vecteezy_ai-generated-portrait-of-handsome-smiling-young-man-with_41642167.png"
+          alt=""
+        />
+      </div>
     </div>
-    <h1 style="padding-left: 15%; padding-top: 5%; color: rgb(83, 15, 104); font-size: 3rem;">
-        It's My Website!!
+    <h1
+      style="
+        padding-left: 15%;
+        padding-top: 5%;
+        color: rgb(83, 15, 104);
+        font-size: 3rem;
+      "
+    >
+      It's My Website!!
     </h1>
-    <div class="centre"><h2 style="font-size: 2rem; padding-left: 15%; color: rgb(83, 15, 104);">>1200 Employees</h2>
-        <div class="lorem"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt </h3></div>
+    <div class="centre">
+      <h2 style="font-size: 2rem; padding-left: 15%; color: rgb(83, 15, 104)">
+        >1200 Employees
+      </h2>
+      <div class="lorem">
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt</h3>
+      </div>
     </div>
     <div class="box">
-    <div class="dabb1">
-        <img src="1.png" alt="" id="imge">
+      <div class="dabb1">
+        <img src="1.png" alt="" id="imge" />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
-    </div>
-    <div class="dabb1">
-        <img src="2.png" alt="" id="imge">
+      </div>
+      <div class="dabb1">
+        <img src="2.png" alt="" id="imge" />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
-    </div>
-    <div class="dabb1">
-        <img src="3.png" alt="" id="imge">
+      </div>
+      <div class="dabb1">
+        <img src="3.png" alt="" id="imge" />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
-    </div>
-    <div class="dabb1">
-        <img src="4.png" alt="" id="imge">
+      </div>
+      <div class="dabb1">
+        <img src="4.png" alt="" id="imge" />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
+      </div>
     </div>
-    </div>
-    <h1 style="padding-left: 15%; padding-top: 3%; color: rgb(6, 0, 8); font-size: 2rem;">
-        Demo Website
+    <h1
+      style="
+        padding-left: 15%;
+        padding-top: 3%;
+        color: rgb(6, 0, 8);
+        font-size: 2rem;
+      "
+    >
+      Demo Website
     </h1>
     <div class="second">
-    <div class="left">
+      <div class="left">
         <div class="sathi">
-            <div class="square"><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ad!</h4></div>
-            <div class="square"><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, libero!</h4></div>
-            <div class="square"><h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis facilis voluptate totam modi voluptatem incidunt!</h4></div>
-            <div class="square"><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iusto nam alias ipsa vel reiciendis quidem dolore possimus? Tempora, voluptatem!</h4></div>
+          <div class="square">
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, ad!
+            </h4>
+          </div>
+          <div class="square">
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, libero!
+            </h4>
+          </div>
+          <div class="square">
+            <h4>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Perspiciatis facilis voluptate totam modi voluptatem incidunt!
+            </h4>
+          </div>
+          <div class="square">
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              iusto nam alias ipsa vel reiciendis quidem dolore possimus?
+              Tempora, voluptatem!
+            </h4>
+          </div>
         </div>
         <div class="dabba"><h2>Lorem ipsum dolor sit amet.</h2></div>
-        <h5 style=" padding-top: 3%; color: rgb(6, 0, 8);">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse veniam
-    </h5>
-    <h5 style=" color: rgb(6, 0, 8);">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse veniam
-    </h5>
-    </div>
-    <div class="right">
+        <h5 style="padding-top: 3%; color: rgb(6, 0, 8)">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          esse veniam
+        </h5>
+        <h5 style="color: rgb(6, 0, 8)">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          esse veniam
+        </h5>
+      </div>
+      <div class="right">
         <div class="photu">
-            <img src="./vecteezy_illustration-of-laptop_44571280.png" alt="" style="width: 100%; height: 100%;">
+          <img
+            src="./vecteezy_illustration-of-laptop_44571280.png"
+            alt=""
+            style="width: 100%; height: 100%"
+          />
         </div>
         <div class="dabba"><h2>Lorem ipsum dolor sit amet.</h2></div>
-        <h5 style=" padding-top: 3%; color: rgb(6, 0, 8);">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse veniam
-    </h5>
-    <h5 style=" color: rgb(6, 0, 8);">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse veniam
-    </h5>
-    </div>
+        <h5 style="padding-top: 3%; color: rgb(6, 0, 8)">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          esse veniam
+        </h5>
+        <h5 style="color: rgb(6, 0, 8)">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          esse veniam
+        </h5>
+      </div>
     </div>
     <div class="main2">
-        <div class="content">
+      <div class="content">
         <div class="container2">
-            <h2 style=" padding-left: 10%; font-size: 2rem;">Providing Employment to Various skilled developers!!</h2>
-        <h3 style="color: #ffecd2; padding-left: 10%; font-size: 1rem; padding-top: 2%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, alias.</h3>
-        <form class="form">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+          <h2 style="padding-left: 10%; font-size: 2rem">
+            Providing Employment to Various skilled developers!!
+          </h2>
+          <h3
+            style="
+              color: #ffecd2;
+              padding-left: 10%;
+              font-size: 1rem;
+              padding-top: 2%;
+            "
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+            alias.
+          </h3>
+          <form class="form">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
             <button type="submit">Subscribe Now</button>
-        </form>
+          </form>
         </div>
 
         <div class="image2">
-            <img src="pexels-danxavier-1239288-removebg-preview.png" alt="">
+          <img src="pexels-danxavier-1239288-removebg-preview.png" alt="" />
         </div>
-        </div>
+      </div>
     </div>
-    <h2 style="padding-top: 5%; padding-left: 5%; font-size: 2rem;">Lorem ipsum dolor sit amet,</h2>
-    <h2 style=" padding-left: 5%; font-size: 2rem;">Lorem ijlkwrlk kjlrj hiien !!</h2>
+    <h2 style="padding-top: 5%; padding-left: 5%; font-size: 2rem">
+      Lorem ipsum dolor sit amet,
+    </h2>
+    <h2 style="padding-left: 5%; font-size: 2rem">
+      Lorem ijlkwrlk kjlrj hiien !!
+    </h2>
     <div class="box">
-    <div class="dabb1">
-        <img src="1.png" alt="" id="imge" style="width: 80%; height: 80%; box-shadow: 12px 12px 15px #e794eb;">
-        <br>
+      <div class="dabb1">
+        <img
+          src="1.png"
+          alt=""
+          id="imge"
+          style="width: 80%; height: 80%; box-shadow: 12px 12px 15px #e794eb"
+        />
+        <br />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
-    </div>
-    <div class="dabb1">
-        <img src="2.png" alt="" id="imge" style="width: 80%; height: 80%; box-shadow: 12px 12px 15px #e794eb;">">
-        <br>
+      </div>
+      <div class="dabb1">
+        <img
+          src="2.png"
+          alt=""
+          id="imge"
+          style="width: 80%; height: 80%; box-shadow: 12px 12px 15px #e794eb"
+        />">
+        <br />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
-    </div>
-    <div class="dabb1">
-        <img src="3.png" alt="" id="imge" style="width: 80%; height: 80%; box-shadow: 12px 12px 15px #e794eb;">
-        <br>
+      </div>
+      <div class="dabb1">
+        <img
+          src="3.png"
+          alt=""
+          id="imge"
+          style="width: 80%; height: 80%; box-shadow: 12px 12px 15px #e794eb"
+        />
+        <br />
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat?</p>
-    </div>
+      </div>
     </div>
     <div class="results">
-        <h2 class="heading">Lorem ipsum dolor sit.</h2>
-        <div class="score">
-            <div class="boxx">
-                <h4>Lorem ipsum dolor sit amet, 2022</h4>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <div class="bar purple">72</div>
-                <p>Lorem, ipsum dolor.</p>
-                <div class="bar yellow">56,1</div>
-            </div>
-            <div class="boxx">
-                <h4>Lorem ipsum dolor sit amet, 2022</h4>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <div class="bar purple">4.7</div>
-                <p>Lorem, ipsum dolor.</p>
-                <div class="bar yellow">4.0</div>
-            </div>
+      <h2 class="heading">Lorem ipsum dolor sit.</h2>
+      <div class="score">
+        <div class="boxx">
+          <h4>Lorem ipsum dolor sit amet, 2022</h4>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <div class="bar purple">72</div>
+          <p>Lorem, ipsum dolor.</p>
+          <div class="bar yellow">56,1</div>
         </div>
-        <h3 class="subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-        <div class="logo">
-            <img src="logo1.png" alt="">
-            <img src="logo2.png" alt="">
-            <img src="logo3.png" alt="">
-            <img src="logo4.png" alt="">
+        <div class="boxx">
+          <h4>Lorem ipsum dolor sit amet, 2022</h4>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <div class="bar purple">4.7</div>
+          <p>Lorem, ipsum dolor.</p>
+          <div class="bar yellow">4.0</div>
         </div>
-        <div class="logo" style="padding-top: 5%;">
-            <img src="logo5.png" alt="">
-            <img src="logo6.png" alt="">
-            <img src="logo7.png" alt="">
-        </div>
+      </div>
+      <h3 class="subheading">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </h3>
+      <div class="logo">
+        <img src="logo1.png" alt="" />
+        <img src="logo2.png" alt="" />
+        <img src="logo3.png" alt="" />
+        <img src="logo4.png" alt="" />
+      </div>
+      <div class="logo" style="padding-top: 5%">
+        <img src="logo5.png" alt="" />
+        <img src="logo6.png" alt="" />
+        <img src="logo7.png" alt="" />
+      </div>
     </div>
-
-        <a href="https://www.flaticon.com/free-icons/nav" title="nav icons" style="font-size: smaller; display: none;">Nav icons created by TravisAvery - Flaticon</a>
-</body>
+    <h2 style="padding-left: 15%">Lorem, ipsum dolor.</h2>
+    <section class="pricing">
+      <h2>Course Pricing</h2>
+      <div class="price-box">
+        <div class="card yellow">
+          <span class="tag">%</span>
+          <h3>Students 5–9 Grade</h3>
+          <p>8 lessons – 60 min</p>
+          <p class="price">$80 / month</p>
+          <button>Choose Plan</button>
+        </div>
+        <div class="card yellow">
+          <span class="tag">%</span>
+          <h3>Students 5–9 Grade</h3>
+          <p>16 lessons – 60 min</p>
+          <p class="price">$150 / month</p>
+          <button>Choose Plan</button>
+        </div>
+        <div class="card purple">
+          <span class="tag">%</span>
+          <h3>Students 10–11 Grade</h3>
+          <p>8 lessons – 60 min</p>
+          <p class="price">$100 / month</p>
+          <button>Choose Plan</button>
+        </div>
+        <div class="card purple">
+          <span class="tag">%</span>
+          <h3>Students 10–11 Grade</h3>
+          <p>16 lessons – 60 min</p>
+          <p class="price">$180 / month</p>
+          <button>Choose Plan</button>
+        </div>
+      </div>
+    </section>
+    <section class="teachers">
+      <h2>Our Teachers</h2>
+      <div class="teacher-box">
+        <div class="teacher-card">
+          <img
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+          />
+          <h4>Anna Johnson</h4>
+          <p>Math teacher, 5+ years experience</p>
+        </div>
+        <div class="teacher-card">
+          <img
+            src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+          />
+          <h4>Alex Brown</h4>
+          <p>Physics teacher, 7+ years experience</p>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <h2>Reviews</h2>
+      <div class="review-box">
+        <div class="review-card yellow">
+          <h4>Daniel Kim</h4>
+          <p>Very good explanation and friendly teachers.</p>
+        </div>
+        <div class="review-card purple">
+          <h4>Jessica Lee</h4>
+          <p>Classes are easy to understand and helpful.</p>
+        </div>
+        <div class="review-card yellow">
+          <h4>Michael Ross</h4>
+          <p>Improved my grades within 2 months.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <h2>Have Questions?</h2>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button>Send</button>
+      </form>
+    </section>
+    <footer>
+      <p>© 2025 All Rights Reserved</p>
+    </footer>
+    <a
+      href="https://www.flaticon.com/free-icons/nav"
+      title="nav icons"
+      style="font-size: smaller; display: none"
+      >Nav icons created by TravisAvery - Flaticon</a
+    >
+  </body>
 </html>
