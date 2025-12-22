@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #19ffa7;
+        }
+        button {
+            padding: 10px 20px;
+            border: 2px solid black;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #4ffd05;
+            color: rgb(6, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <div>
+        <button id="increment">Increase</button>
+        <button id="decrement">Decrease</button>
+    </div>
+</body>
+<script>
+    let count=0;
+    let inc=document.getElementById('increment');
+    let dec=document.getElementById('decrement');
+    inc.addEventListener('click', function(){
+        count++;
+        document.getElementById('counter').innerText=count;
+    })
+    dec.addEventListener('click', function(){
+        count--;
+        document.getElementById('counter').innerText=count;
+    })
+</script>
+</html>
