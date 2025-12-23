@@ -13,13 +13,13 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #19ffa7;
+            background-color: aqua;
         }
         button {
             padding: 10px 20px;
             border: 2px solid black;
             margin: 5px;
-            font-size: 16px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 5px;
             background-color: #4ffd05;
@@ -43,7 +43,9 @@
         document.getElementById('counter').innerText=count;
     })
     dec.addEventListener('click', function(){
-        count--;
+        if (count > 0) {
+            count--;
+        }
         document.getElementById('counter').innerText=count;
     })
 </script>
