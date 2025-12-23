@@ -35,18 +35,29 @@
     </div>
 </body>
 <script>
-    let count=0;
     let inc=document.getElementById('increment');
     let dec=document.getElementById('decrement');
+    function updateCounter() {
+        let count=0;
+        return {
+            inc: function (){
+                count++;
+                return count;
+            },
+            dec: function (){
+                if(count<0)
+                    return count;
+                count--;
+                return count;
+            }
+        };
+    }
+    const counter=updateCounter();
     inc.addEventListener('click', function(){
-        count++;
-        document.getElementById('counter').innerText=count;
+        document.getElementById('counter').innerText=counter.inc();
     })
     dec.addEventListener('click', function(){
-        if (count > 0) {
-            count--;
-        }
-        document.getElementById('counter').innerText=count;
+        document.getElementById('counter').innerText=counter.dec();
     })
 </script>
 </html>
