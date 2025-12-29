@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calci.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="display" placeholder="0" disabled />
+      <div class="buttons">
+        <button>/</button>
+        <button class="val">1</button>
+        <button class="val">2</button>
+        <button class="val">3</button>
+        <button class="val">*</button>
+        <button class="val">4</button>
+        <button class="val">5</button>
+        <button class="val">6</button>
+        <button class="val">-</button>
+        <button class="val">7</button>
+        <button class="val">8</button>
+        <button class="val">9</button>
+        <button class="val">+</button>
+        <button class="val">0</button>
+        <button style="grid-column-start: span 2;" id="equal">=</button>
+      </div>
+    </div>
+  </body>
+  <script>
+        let num=document.querySelectorAll('.val');
+        num.forEach(function(button) {
+            button.addEventListener('click', function(e){
+                document.querySelector('.display').value += button.innerText;
+            });
+        });
+        let eq=document.getElementById('equal');
+        eq.addEventListener('click', function(){
+            let exp=document.querySelector('.display').value;
+            if(exp!==''){
+                try{
+                    let result=eval(exp);
+                    document.querySelector('.display').value=result;
+                } catch (error) {
+                    document.querySelector('.display').value = "Error";
+                }
+            }
+        });
+  </script>
+</html>

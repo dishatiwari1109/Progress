@@ -6,9 +6,10 @@
     <title>Document</title>
     <style>
         body {
-            animation: pageFade 1s ease-in-out;
+            animation: fade 1s ease-in-out;
         }
-        @keyframes pageFade {
+        @keyframes fade
+         {
         from {
             opacity: 0;
         }
@@ -799,7 +800,7 @@
           <p>Very good explanation and friendly teachers.</p>
         </div>
         <div class="review-card purple">
-          <h4>Jessica lee</h4>
+          <h4>Jasveer</h4>
           <p>Classes are easy to understand and helpful.</p>
         </div>
         <div class="review-card yellow">
@@ -811,9 +812,9 @@
     <section class="contact">
       <h2>Have Questions?</h2>
       <form>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Your Message"></textarea>
+        <input type="text" placeholder="Your Name" required />
+        <input type="phone" placeholder="Your Phone Number" pattern="\+91+[0-9]{10}" required title="error"/>
+        <textarea placeholder="Your Message" required></textarea>
         <button>Send</button>
       </form>
     </section>

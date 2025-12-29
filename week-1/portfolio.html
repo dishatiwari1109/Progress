@@ -1,118 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html{
-            background-color:#1a2e39;
-            color: white;
-            height: 100%;
-        }
-        *{
-            margin: 0;
-        }
-        .navbar{
-            background-color: #0f1b21;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content:space-around;
-            /* padding-left: 300px; */
-            padding-top: 0px;
-            padding-bottom: 0px;
-            height: 4rem;
-            align-items: center;
-        }
-        a{
-            text-decoration: none;
-            color:white;
-            font-size: large;
-        }
-        .navsection{
-            display: flex;
-            width: 30%;
-            flex-flow: row wrap;
-            /* padding-top: 1%; */
-            justify-content: space-between;
-        }
-        .head31{
-            display: inline-block;
-            color: aqua;
-        }
-        .head3{
-            display: inline;
-        }
-        .main{
-            display: flex;
-            /* height: 100%;
-             */
-             /* border: 2px solid red; */
-             padding-top: 5%;
-             width: 60rem;
-             height: 20rem;
-            /* border: 4px solid red; */
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding-left: 10%;
-            /* justify-content: space-between; */
-            /* justify-content: center; */
-        }
-        .intro{
-            width: 25rem;
-            /* height: 30rem; */
-            /* border: 2px solid black; */
-        }
-        .photo{
-            width: 270px;
-            height: 270px;
-            /* border: 2px solid black; */
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disha Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-        .photo img{
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #8904c2;
-            box-shadow: 
-                0 0 15px #00ffff,
-                0 0 15px #7300ff,
-                0 0 30px #b300ff;
-        }
-        #bio{
-            padding: 5% 10% 5% 10%;
-        }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background: #1a2e39;
+        color: white;
+      }
+      nav {
+        background: #0f1b21;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px;
+        width: 100%;
+      }
+      nav h1 {
+        color: aqua;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 30px;
+        font-size: 18px;
+      }
+      section {
+        padding: 120px 80px;
+        height: 100vh;
+      }
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .home h2 {
+        font-size: 32px;
+      }
+      .home h1 {
+        font-size: 56px;
+        margin: 10px 0;
+      }
+      .role {
+        display: flex;
+        gap: 10px;
+      }
+      .role span {
+        color: aqua;
+      }
+      .home button {
+        margin-top: 25px;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 30px;
+        background: aqua;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .home button:hover {
+        background: #00dede;
+      }
+      .photo {
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .photo img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #1a2e39;
+      }
+      .about p {
+        max-width: 750px;
+        font-size: 18px;
+        line-height: 1.8;
+        margin-top: 20px;
+      }
+      .skills {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+      .skill {
+        padding: 12px 22px;
+        border: 1px solid aqua;
+        border-radius: 20px;
+      }
+      .projects .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .card {
+        background: #0f1b21;
+        padding: 25px;
+        border-radius: 18px;
+        transition: 0.4s;
+      }
+      .card h3 {
+        margin-bottom: 10px;
+        color: aqua;
+      }
+      .card p {
+        font-size: 15px;
+        line-height: 1.6;
+        opacity: 0;
+        transition: 0.4s;
+      }
+      .card:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 20px aqua;
+      }
+      .card:hover p {
+        opacity: 1;
+      }
+      .contact form {
+        max-width: 420px;
+      }
+      .contact input,
+      .contact textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+      }
+      .contact button {
+        padding: 12px;
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+        background: aqua;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #0f1b21;
+      }
+      .social{
+    margin-top:10px;
+}
+.social a{
+    color:white;
+    font-size:22px;
+    margin:0 10px;
+    transition:0.3s;
+}
+.social a:hover{
+    color:aqua;
+    transform:scale(1.2);
+}
 
     </style>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="title"><h1>Portfolio</h1></div>
-        <div class="navsection">
-            <a href="./portfolio.html">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./contact.html">Contact</a>
-            <a href="">Project</a>
-        </div>
+  </head>
+  <body>
+    <nav>
+      <h1>Portfolio</h1>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
-    <div class="main">
-        <div class="intro">
-        <h2 class="head1">Hello, It's Me!!</h2>
-        <h1 class="head2">Disha Tiwari</h1>
-        <div class="chhota">
-            <h2 class="head3">And I'm a</h2>
-            <h2 class="head31">FullStack Developer!</h2>
+    <section class="home" id="home">
+      <div>
+        <h2>Hello, It's Me</h2>
+        <h1>Disha Tiwari</h1>
+        <div class="role">
+          <h2>And I'm a</h2>
+          <span><h2>Full Stack Developer</h2></span>
         </div>
-        <button style="margin-top: 4%; background-color: aqua; border-radius: 15px; border: 2px solid black; width: 25%; height: 30%;"><b>Know More</b></button>
+        <button>Know More</button>
+      </div>
+      <div class="photo">
+        <img src="./DSC_4323.JPG" alt="" />
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h1>About Me</h1>
+      <p>
+        Passionate learner with a curious mind, exploring technology and
+        creativity. Focused on self-growth, consistency, and turning ideas into
+        reality. Believes in quiet hard work, positive mindset, and becoming
+        better every single day.
+      </p>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">MongoDB</div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h1>Projects</h1>
+      <div class="cards">
+        <div class="card">
+          <h3>JobJiffy</h3>
+          <p>
+            A service-providing platform where users can find plumbers,
+            electricians, tailors, and daily service workers easily.
+          </p>
         </div>
-        <div class="photo">
-            <img src="./DSC_4323.JPG" alt="">
+        <div class="card">
+          <h3>E-Commerce Website</h3>
+          <p>
+            Full-stack shopping website with authentication, product listing,
+            cart, and order management.
+          </p>
         </div>
+        <div class="card">
+          <h3>Leaderboard App</h3>
+          <p>
+            React + Node.js based leaderboard where users gain random points and
+            rankings update dynamically.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>
+            Personal responsive portfolio showcasing skills, projects, and
+            contact information.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h1>Contact Me</h1>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <footer>
+    <p>© 2025 Disha Tiwari</p>
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
-    <div>
-        <h2 id="bio">Passionate learner with a curious mind, exploring technology and creativity. Focused on self-growth, consistency, and turning ideas into reality. Believes in quiet hard work, positive mindset, and becoming better every single day.</h2>
-    </div>
-    </body>
+</footer>
+</body>
 </html>
