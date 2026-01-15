@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        ol {
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(212, 232, 108);
+            width: 60%;
+        }
+        ol:hover {
+            background-color: rgb(193, 248, 29);
+            transform: scaleY(1.5);
+            transform: scaleX(1.01);
+        }
+        *{
+            box-sizing: border-box;
+            color: #000;
+            font-size: large;
+            background-color: aquamarine;
+        }
+        label{
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        button{
+            width: 100px;
+            background-color: rgb(241, 147, 5);
+            margin: auto;
+
+        }
+        button:hover{
+            background-color: rgb(255, 200, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 50px;">Quiz Application</h1>
+    <form style="display: flex; flex-direction: column; width: 100%">
+        <label for="q1">1. What is a closure??</label>
+        <li>
+            <ol id="true">A function inside another function</ol>
+            <ol id="false">A combination of a function and its lexical scope</ol>
+            <ol id="false">A group of variables</ol>
+            <ol id="false">A loop structure</ol>
+        </li>
+
+        <label for="q2">2. What is the main feature of a closure??</label>
+        <li>
+            <ol id="false">It uses global variables</ol>
+            <ol id="true">It remembers variables from its lexical scope</ol>
+            <ol id="false">It automatically executes functions</ol>
+            <ol id="false">It clears memory</ol>
+        </li>
+
+        <label for="q3">3. In a normal function (non-strict mode), what does this refer to?</label>
+        <li>
+            <ol id="true">The global object (window in browsers)</ol>
+            <ol id="false">The function itself</ol>
+            <ol id="false">Undefined</ol>
+            <ol id="false">The parent function</ol>
+        </li>
+
+        <button type="submit" style="margin-top: 10px; padding: 5px; border: 2px solid black; border-radius: 5px;">Submit</button>
+    </form>
+</body>
+<script>
+    const form = document.querySelector('form');
+    let score=0;
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementsByTagName('form')[0].innerHTML =
+         `<h2 style="text-align: center;">Thank you for participating in the quiz!</h2><h2>Your Score is ${score}</h2>`;
+    });
+    document.querySelectorAll('ol').forEach(option => {
+        option.addEventListener('click', () => {
+            option.style.backgroundColor = option.id === 'true' ? 'green' : 'red ';
+            score += option.id === 'true' ? 10 : 0;
+        });
+    });
+</script>
+</html>

@@ -9,7 +9,7 @@
     <div class="calculator">
       <input type="text" class="display" placeholder="0" disabled />
       <div class="buttons">
-        <button>/</button>
+        <button class="val">/</button>
         <button class="val">1</button>
         <button class="val">2</button>
         <button class="val">3</button>
@@ -35,16 +35,45 @@
             });
         });
         let eq=document.getElementById('equal');
-        eq.addEventListener('click', function(){
-            let exp=document.querySelector('.display').value;
-            if(exp!==''){
-                try{
-                    let result=eval(exp);
-                    document.querySelector('.display').value=result;
-                } catch (error) {
-                    document.querySelector('.display').value = "Error";
-                }
-            }
-        });
+        eq.addEventListener('click', function () {
+        let exp = document.querySelector('.display').value;
+        if (exp !== "") {
+          let result;
+          let operator;
+          if (exp.includes('+')) 
+            operator= '+';
+          else if (exp.includes('-')) 
+            operator= '-';
+          else if (exp.includes('*')) 
+          operator= '*';
+          else if (exp.includes('/')) 
+            operator= '/';
+          else {
+            document.querySelector('.display').value = "Error";
+            return;
+          }
+          let parts=exp.split(operator);
+          let num1=Number(parts[0]);
+          let num2=Number(parts[1]);
+          switch (operator) {
+            case '+':
+              result=num1+num2;
+              break;
+            case '-':
+              result=num1-num2;
+              break;
+            case '*':
+              result=num1*num2;
+              break;
+            case '/':
+              result=num2!== 0 ? num1/num2 : "Error";
+              break;
+            default:
+              result="Error";
+          }
+          document.querySelector('.display').value = result;
+        }
+      });
+
   </script>
 </html>

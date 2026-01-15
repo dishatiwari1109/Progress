@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product List</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<body class="light">
+
+  <div class="container">
+
+    <h2>Product List</h2>
+    <div class="controls">
+      <input type="text" placeholder="Search product" id="searching">
+
+      <select id="category">
+        <option>All Categories</option>
+        <option id="electronics">Electronics</option>
+        <option id="clothing">Clothing</option>
+        <option id="accessories">Accessories</option>
+      </select>
+
+      <select id="choose">
+        <option>Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+
+      <div class="view-btns">
+        <button id="list">List View</button>
+        <button id="grid">Grid View</button>
+      </div>
+      <button id="toggle">Dark Mode</button>
+    </div>
+    <div class="products grid-view">
+
+      <div class="product-card">
+        <div class="image"><img src="https://images.pexels.com/photos/844923/pexels-photo-844923.jpeg" alt="headphones"></div>
+        <h3>HeadPhones</h3>
+        <p>Category: Electronics</p>
+        <span>₹1200</span>
+      </div>
+
+      <div class="product-card">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/4066293/pexels-photo-4066293.jpeg" alt="T-Shirt">
+        </div>
+        <h3>T-Shirt</h3>
+        <p>Category: Clothing</p>
+        <span>₹800</span>
+      </div>
+
+      <div class="product-card">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/850885/pexels-photo-850885.jpeg" alt="Phone Case">
+        </div>
+        <h3>Phone Case</h3>
+        <p>Category: Accessories</p>
+        <span>₹500</span>
+      </div>
+        <div class="product-card">
+            <div class="image">
+                <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg" alt="Laptop">
+            </div>
+            <h3>Laptop</h3>
+            <p>Category: Electronics</p>
+            <span>₹45000</span>
+        </div>
+        <div class="product-card">
+            <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-UUQMqZTsNxCez7qsckXK2lAOdyF-YGRjBQ&s" alt="T-Shirt">
+            </div>
+            <h3>Jeans</h3>
+            <p>Category: Clothing</p>
+            <span>₹1500</span>
+        </div>
+        <div class="product-card ">
+            <div class="image">
+                <img src="https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg" alt="T-Shirt">
+            </div>
+            <h3>Sunglasses</h3>
+            <p>Category: Accessories</p>
+            <span>₹2000</span>
+        </div>
+        <div class="product-card">
+            <div class="image">
+                <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg" alt="T-Shirt">
+            </div>
+            <h3>Earbuds</h3>
+            <p>Category: Electronics</p>
+            <span>₹3000</span>
+        </div>
+    </div>
+
+  </div>
+
+</body>
+<script>
+  localStorage.setItem('theme', 'light');
+  const productsContainer = document.querySelector(".grid-view");
+  const products = Array.from(document.querySelectorAll(".product-card"));
+  const body=document.querySelector('body');
+  const container=document.querySelector('.container');
+  const toggle=document.getElementById('toggle');
+  const card=document.querySelectorAll('.product-card');
+   
+  toggle.addEventListener('click', function(e){
+    localStorage.getItem('theme')==='light'?(body.className='dark',
+    container.classList.add('dark'),
+    card.forEach((item)=>{
+      item.classList.add('dark');
+    }),
+    localStorage.setItem('theme', 'dark'),
+    e.target.innerText='Dark Mode')
+    :(body.className='light', 
+    container.classList.remove('dark'),
+    card.forEach((item)=>{
+      item.classList.remove('dark');
+    }),
+    localStorage.setItem('theme', 'light'),
+    e.target.innerText='Light Mode'
+  )
+  })
+  document.getElementById("choose").addEventListener("change", function (e) {
+    let val = e.target.value;
+
+    if (val === "low") {
+      products.sort(
+        (a, b) => {
+            let priceA = a.querySelector("span").innerText.replace("₹", "");
+            let priceB = b.querySelector("span").innerText.replace("₹", "");
+            return priceA - priceB;
+        }
+      );
+    } else if (val === "high") {
+      products.sort(
+        (a, b) => {
+            let priceA = a.querySelector("span").innerText.replace("₹", "");
+            let priceB = b.querySelector("span").inne
+            rText.replace("₹", "");
+            return priceB - priceA;
+        }
+      );
+    }
+
+    reload();
+  });
+
+  function reload() {
+    productsContainer.innerHTML = "";
+    products.forEach((item) => {
+      productsContainer.appendChild(item);
+    });
+  }
+  document.getElementById("list").addEventListener("click", () => {
+    productsContainer.style.gridTemplateColumns = "1fr";
+    document.querySelectorAll(".product-card .image").forEach((img) => {
+      img.style.width = "150px";
+      img.style.height = "150px";
+      img.style.margin = "auto";
+    });
+  });
+  document.getElementById("grid").addEventListener("click", () => {
+    productsContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
+  });
+  let input=document.getElementById('searching');
+  input.addEventListener('change', function(e){
+    let val=e.target.value;
+    console.log(products)
+    products.forEach((item)=>{
+        let st=item.children[1].innerHTML.toLowerCase();
+        val=val.toLowerCase();
+        st.includes(val)?item.style.display='block':item.style.display='none';
+    })
+  })
+  let cat=document.getElementById('category');
+  cat.addEventListener('change', function(e){
+    let val=e.target.value;
+    products.forEach((item)=>{
+        let catg=item.children[2].innerHTML.toLowerCase();
+        catg=catg.split(': ')[1];
+        val=val.toLowerCase();
+        val===catg?item.style.display='block':val==='all categories'?item.style.display='block':item.style.display='none';
+    })
+  })
+
+
+</script>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+<div class="todo-container">
+    <h1>To-Do Tasks</h1>
+    <div class="add-task">
+        <input type="text" id="task" placeholder="Enter task">
+        <input type="date" id="due">
+        <button id="btn">Add Task</button>
+    </div>
+    <div class="task-section" id="taskP">
+        <h2>Pending Tasks</h2>
+    </div>
+    <div class="task-section completed" id="taskC">
+        <h2>Completed Tasks</h2>
+        <ul id="completed" class="task-list">
+        </ul>
+    </div>
+</div>
+    <script>
+        let arr=[];
+        let inp=document.getElementById('task');
+        let btn=document.getElementById('btn');
+        let completed=document.getElementById('completed');
+        let parent=document.getElementById('taskP');
+        window.onload=function(){
+            arr=JSON.parse(localStorage.getItem('task'))||[];
+            fetch();
+        };
+        function fetch(){
+            parent.innerHTML="<h2>Pending Tasks</h2>";
+            completed.innerHTML="";
+            arr.forEach((item)=>{
+                let child=document.createElement('p');
+                //let completed=document.createElement('div');
+                let checkbox=document.createElement('input');
+                checkbox.type='checkbox';
+                checkbox.checked=item.done||false;
+                child.appendChild(checkbox);
+                let span=document.createElement('span');
+                span.innerText=" "+item.name;
+                child.appendChild(span);
+            let divdate=document.createElement('div');
+            divdate.innerText=item.datee;
+                child.appendChild(divdate);
+                //console.log(child);
+                let btnn=document.createElement('button');
+                btnn.innerText='delete';
+                btnn.classList.add('btnn');
+                btnn.addEventListener('click',function(){
+                    arr=arr.filter(t=>t.id!==item.id);
+                    localStorage.setItem('task',JSON.stringify(arr));
+                    fetch();
+                });
+                checkbox.addEventListener('change',function(){
+                    item.done=this.checked;
+                    localStorage.setItem('task',JSON.stringify(arr));
+                    fetch();
+                });
+                child.appendChild(btnn);
+                if(item.done){
+                    completed.appendChild(child);
+                }else{
+                    parent.appendChild(child);
+                }
+            });
+        }
+        btn.addEventListener('click',function(){
+            let val=inp.value;
+            let date=document.getElementById('due').value;
+            let task={
+                id:Date.now(),
+                name:val,
+                datee:date,
+                done:false
+            };
+            arr.push(task);
+            localStorage.setItem('task',JSON.stringify(arr));
+            fetch();
+        });
+        </script>
+
+</body>
+</html>
