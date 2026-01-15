@@ -73,6 +73,7 @@
 </body>
 <script>
     const form = document.querySelector('form');
+     
     let score=0;
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -80,10 +81,14 @@
          `<h2 style="text-align: center;">Thank you for participating in the quiz!</h2><h2>Your Score is ${score}</h2>`;
     });
     document.querySelectorAll('ol').forEach(option => {
+        let attempted=false 
         option.addEventListener('click', () => {
-            option.style.backgroundColor = option.id === 'true' ? 'green' : 'red ';
-            score += option.id === 'true' ? 10 : 0;
+            if(!attempted){
+                attempted = true;
+                option.style.backgroundColor = option.id === 'true' ? 'green' : 'red ';
+                score += option.id === 'true' ? 10 : 0;
+            }
         });
     });
 </script>
-</html>
+</html> 
